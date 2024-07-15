@@ -1,0 +1,7 @@
+verilog xil_defaultlib  \
+"../../../../../../../../DDR3_AXI.gen/sources_1/ip/rdata_w256x512_r256x512/sim/rdata_w256x512_r256x512.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

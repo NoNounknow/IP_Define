@@ -1,0 +1,24 @@
+# do {tb_bayer2rgb_3x3_compile.do}
+# Model Technology ModelSim SE-64 vmap 10.5 Lib Mapping Utility 2016.02 Feb 13 2016
+# vmap xil_defaultlib modelsim_lib/msim/xil_defaultlib 
+# Modifying C:\SIM_DATA\M2020_V2022\modelsim.ini
+# Model Technology ModelSim SE-64 vlog 10.5 Compiler 2016.02 Feb 13 2016
+# Start time: 13:04:42 on Jan 05,2024
+# vlog -incr -mfcu -work xil_defaultlib ../../../../../../RTL/Line_Shift_RAM.v ../../../../../../RTL/bayer2rgb_3x3.v ../../../../../../sim/tb_bayer2rgb_3x3.v 
+# -- Compiling module Line_Shift_RAM
+# -- Compiling module bayer2rgb_3x3
+# -- Compiling module tb_bayer2rgb_3x3
+# 
+# Top level modules:
+# 	tb_bayer2rgb_3x3
+# End time: 13:04:42 on Jan 05,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vlog 10.5 Compiler 2016.02 Feb 13 2016
+# Start time: 13:04:42 on Jan 05,2024
+# vlog -work xil_defaultlib glbl.v 
+# -- Compiling module glbl
+# 
+# Top level modules:
+# 	glbl
+# End time: 13:04:42 on Jan 05,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0

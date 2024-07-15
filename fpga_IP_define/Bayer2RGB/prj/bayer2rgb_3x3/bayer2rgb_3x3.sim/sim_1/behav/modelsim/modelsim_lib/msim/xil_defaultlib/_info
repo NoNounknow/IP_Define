@@ -1,0 +1,105 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/three_verilog/fpga_IP_define/Bayer2RGB/prj/bayer2rgb_3x3/bayer2rgb_3x3.sim/sim_1/behav/modelsim
+T_opt
+!s110 1704431092
+VHhZ;PWom<3onQCFmmz1SF0
+04 16 4 work tb_bayer2rgb_3x3 fast 0
+04 4 4 work glbl fast 0
+=1-847b57627442-65978df4-d9-700
+o-quiet -auto_acc_if_foreign -work xil_defaultlib -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip +acc
+Z1 tCvgOpt 0
+n@_opt
+OL;O;10.5;63
+vbayer2rgb_3x3
+Z2 !s110 1704431082
+!i10b 1
+!s100 <XU=mHP9R;R3]B1a?Obhl3
+IojY=6;1B6SII=SJBn[z?e3
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1704431029
+8../../../../../../RTL/bayer2rgb_3x3.v
+F../../../../../../RTL/bayer2rgb_3x3.v
+L0 1
+Z4 OL;L;10.5;63
+r1
+!s85 0
+31
+Z5 !s108 1704431082.000000
+Z6 !s107 ../../../../../../sim/tb_bayer2rgb_3x3.v|../../../../../../RTL/bayer2rgb_3x3.v|../../../../../../RTL/Line_Shift_RAM.v|
+Z7 !s90 -incr|-mfcu|-work|xil_defaultlib|../../../../../../RTL/Line_Shift_RAM.v|../../../../../../RTL/bayer2rgb_3x3.v|../../../../../../sim/tb_bayer2rgb_3x3.v|
+!i113 0
+Z8 o-mfcu -work xil_defaultlib -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R1
+vglbl
+R2
+!i10b 1
+!s100 aGX4R92RO3^bD43HL2j:J2
+Ii@2]DfVnUU[WE=M5a<e[a3
+R3
+R0
+w1665704903
+8glbl.v
+Fglbl.v
+L0 6
+R4
+r1
+!s85 0
+31
+R5
+!s107 glbl.v|
+!s90 -work|xil_defaultlib|glbl.v|
+!i113 0
+o-work xil_defaultlib -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R1
+vLine_Shift_RAM
+R2
+!i10b 1
+!s100 1E_N_6[07GKlY3=5@=B0n1
+I0b0z4UQ5AgRTX;]h35S<I1
+R3
+R0
+w1704427465
+8../../../../../../RTL/Line_Shift_RAM.v
+F../../../../../../RTL/Line_Shift_RAM.v
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+R6
+R7
+!i113 0
+R8
+R1
+n@line_@shift_@r@a@m
+vtb_bayer2rgb_3x3
+R2
+!i10b 1
+!s100 lG:MgHz[za52kXY`3RUMQ3
+Iz<L?HbTndbb^lS8_C@CcA0
+R3
+R0
+w1704351677
+8../../../../../../sim/tb_bayer2rgb_3x3.v
+F../../../../../../sim/tb_bayer2rgb_3x3.v
+L0 3
+R4
+r1
+!s85 0
+31
+R5
+R6
+R7
+!i113 0
+R8
+R1

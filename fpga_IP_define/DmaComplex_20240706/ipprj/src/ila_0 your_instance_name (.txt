@@ -1,0 +1,9 @@
+ila_0 ila_0 (
+	.clk(I_Post_clk), // input wire clk
+	.probe0({
+Post_Start,
+rd_fifo_rd_en,
+rd_fifo_rd_data,
+
+    }) // input wire [499:0] probe0
+);

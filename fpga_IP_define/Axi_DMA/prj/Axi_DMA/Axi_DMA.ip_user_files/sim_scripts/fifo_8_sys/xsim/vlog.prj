@@ -1,0 +1,6 @@
+verilog xil_defaultlib  \
+"../../../../Axi_DMA.gen/sources_1/ip/fifo_8_sys/sim/fifo_8_sys.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+nosort

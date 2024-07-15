@@ -1,0 +1,27 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"1.03242",
+   "Default View_TopLeft":"-106,-200",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:10.0 non-TLS
+#  -string -flagsOSRD
+preplace port port-id_HDMI_CLK_P -pg 1 -lvl 3 -x 560 -y 90 -defaultsOSRD
+preplace port port-id_HDMI_CLK_N -pg 1 -lvl 3 -x 560 -y 110 -defaultsOSRD
+preplace port port-id_sysclk_p -pg 1 -lvl 0 -x 0 -y 80 -defaultsOSRD
+preplace portBus HDMI_TX_P -pg 1 -lvl 3 -x 560 -y 130 -defaultsOSRD
+preplace portBus HDMI_TX_N -pg 1 -lvl 3 -x 560 -y 150 -defaultsOSRD
+preplace inst clk_wiz_0 -pg 1 -lvl 1 -x 110 -y 80 -defaultsOSRD
+preplace inst HDMI_TX_0 -pg 1 -lvl 2 -x 380 -y 120 -defaultsOSRD
+preplace netloc HDMI_TX_0_HDMI_CLK_N 1 2 1 NJ 110
+preplace netloc HDMI_TX_0_HDMI_CLK_P 1 2 1 NJ 90
+preplace netloc HDMI_TX_0_HDMI_TX_N 1 2 1 NJ 150
+preplace netloc HDMI_TX_0_HDMI_TX_P 1 2 1 NJ 130
+preplace netloc clk_in1_0_1 1 0 1 N 80
+preplace netloc clk_wiz_0_P_5x 1 1 1 210 80n
+preplace netloc clk_wiz_0_P_base 1 1 1 220 60n
+preplace netloc clk_wiz_0_locked 1 1 1 200 100n
+levelinfo -pg 1 0 110 380 560
+pagesize -pg 1 -db -bbox -sgen -110 0 720 230
+"
+}
+0

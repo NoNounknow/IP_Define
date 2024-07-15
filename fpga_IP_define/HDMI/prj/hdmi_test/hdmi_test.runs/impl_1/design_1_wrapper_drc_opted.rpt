@@ -1,0 +1,57 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
+| Date         : Wed Jan 17 14:09:28 2024
+| Host         : LAPTOP-H1858A6E running 64-bit major release  (build 9200)
+| Command      : report_drc -file design_1_wrapper_drc_opted.rpt -pb design_1_wrapper_drc_opted.pb -rpx design_1_wrapper_drc_opted.rpx
+| Design       : design_1_wrapper
+| Device       : xc7z020clg484-1
+| Speed File   : -1
+| Design State : Synthesized
+---------------------------------------------------------------------------------------------------------------------------------------
+
+Report DRC
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+           Ruledeck: default
+             Max violations: <unlimited>
+             Violations found: 4
++-----------+----------+----------------------------+------------+
+| Rule      | Severity | Description                | Violations |
++-----------+----------+----------------------------+------------+
+| REQP-1840 | Warning  | RAMB18 async control check | 3          |
+| ZPS7-1    | Warning  | PS7 block required         | 1          |
++-----------+----------+----------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+REQP-1840#1 Warning
+RAMB18 async control check  
+The RAMB18E1 design_1_i/HDMI_TX_0/inst/Blu_Gamma_06/Post_Data_reg has an input control pin design_1_i/HDMI_TX_0/inst/Blu_Gamma_06/Post_Data_reg/RSTRAMARSTRAM (net: design_1_i/HDMI_TX_0/inst/Blu_Gamma_06/SR[0]) which is driven by a register (design_1_i/HDMI_TX_0/inst/reset_syn/reset_2_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1840#2 Warning
+RAMB18 async control check  
+The RAMB18E1 design_1_i/HDMI_TX_0/inst/Blu_Gamma_06/Post_Data_reg has an input control pin design_1_i/HDMI_TX_0/inst/Blu_Gamma_06/Post_Data_reg/RSTRAMB (net: design_1_i/HDMI_TX_0/inst/Blu_Gamma_06/SR[0]) which is driven by a register (design_1_i/HDMI_TX_0/inst/reset_syn/reset_2_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+REQP-1840#3 Warning
+RAMB18 async control check  
+The RAMB18E1 design_1_i/HDMI_TX_0/inst/Red_Gamma_06/Post_Data_reg has an input control pin design_1_i/HDMI_TX_0/inst/Red_Gamma_06/Post_Data_reg/RSTRAMARSTRAM (net: design_1_i/HDMI_TX_0/inst/Red_Gamma_06/SR[0]) which is driven by a register (design_1_i/HDMI_TX_0/inst/reset_syn/reset_2_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+ZPS7-1#1 Warning
+PS7 block required  
+The PS7 cell must be used in this Zynq design in order to enable correct default configuration.
+Related violations: <none>
+
+

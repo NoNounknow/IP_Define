@@ -1,0 +1,427 @@
+
+*** Running vivado
+    with args -log axi_dma.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source axi_dma.tcl
+
+
+
+****** Vivado v2022.2 (64-bit)
+  **** SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+  **** IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+source axi_dma.tcl -notrace
+Command: read_checkpoint -auto_incremental -incremental D:/three_verilog/fpga_IP_define/Axi_DMA/prj/Axi_DMA/Axi_DMA.srcs/utils_1/imports/synth_1/axi_dma.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from D:/three_verilog/fpga_IP_define/Axi_DMA/prj/Axi_DMA/Axi_DMA.srcs/utils_1/imports/synth_1/axi_dma.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top axi_dma -part xc7a75tfgg484-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a75t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a75t'
+INFO: [Device 21-403] Loading part xc7a75tfgg484-1
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 23064
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:04 . Memory (MB): peak = 2233.398 ; gain = 409.793
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'axi_dma' [D:/three_verilog/fpga_IP_define/Axi_DMA/rtl/axi_dma.v:1]
+INFO: [Synth 8-6157] synthesizing module 'fifo_wr_64_64' [D:/three_verilog/fpga_IP_define/Axi_DMA/prj/Axi_DMA/Axi_DMA.runs/synth_1/.Xil/Vivado-27076-LAPTOP-H1858A6E/realtime/fifo_wr_64_64_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'fifo_wr_64_64' (0#1) [D:/three_verilog/fpga_IP_define/Axi_DMA/prj/Axi_DMA/Axi_DMA.runs/synth_1/.Xil/Vivado-27076-LAPTOP-H1858A6E/realtime/fifo_wr_64_64_stub.v:5]
+WARNING: [Synth 8-7071] port 'wr_rst_busy' of module 'fifo_wr_64_64' is unconnected for instance 'u1_fifo_wr_64_64' [D:/three_verilog/fpga_IP_define/Axi_DMA/rtl/axi_dma.v:291]
+WARNING: [Synth 8-7071] port 'rd_rst_busy' of module 'fifo_wr_64_64' is unconnected for instance 'u1_fifo_wr_64_64' [D:/three_verilog/fpga_IP_define/Axi_DMA/rtl/axi_dma.v:291]
+WARNING: [Synth 8-7023] instance 'u1_fifo_wr_64_64' of module 'fifo_wr_64_64' has 13 connections declared, but only 11 given [D:/three_verilog/fpga_IP_define/Axi_DMA/rtl/axi_dma.v:291]
+INFO: [Synth 8-6157] synthesizing module 'fifo_rd_64_8' [D:/three_verilog/fpga_IP_define/Axi_DMA/prj/Axi_DMA/Axi_DMA.runs/synth_1/.Xil/Vivado-27076-LAPTOP-H1858A6E/realtime/fifo_rd_64_8_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'fifo_rd_64_8' (0#1) [D:/three_verilog/fpga_IP_define/Axi_DMA/prj/Axi_DMA/Axi_DMA.runs/synth_1/.Xil/Vivado-27076-LAPTOP-H1858A6E/realtime/fifo_rd_64_8_stub.v:5]
+WARNING: [Synth 8-689] width (8) of port connection 'dout' does not match port width (16) of module 'fifo_rd_64_8' [D:/three_verilog/fpga_IP_define/Axi_DMA/rtl/axi_dma.v:454]
+WARNING: [Synth 8-689] width (11) of port connection 'wr_data_count' does not match port width (12) of module 'fifo_rd_64_8' [D:/three_verilog/fpga_IP_define/Axi_DMA/rtl/axi_dma.v:458]
+INFO: [Synth 8-6157] synthesizing module 'data_sync_ext' [D:/three_verilog/fpga_IP_define/Axi_DMA/rtl/data_sync_ext.v:21]
+INFO: [Synth 8-6155] done synthesizing module 'data_sync_ext' (0#1) [D:/three_verilog/fpga_IP_define/Axi_DMA/rtl/data_sync_ext.v:21]
+INFO: [Synth 8-6157] synthesizing module 'data_joint' [D:/three_verilog/fpga_IP_define/Axi_DMA/rtl/data_joint.v:23]
+	Parameter IW_WIDTH bound to: 8 - type: integer 
+	Parameter OW_WIDTH bound to: 64 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'data_joint' (0#1) [D:/three_verilog/fpga_IP_define/Axi_DMA/rtl/data_joint.v:23]
+INFO: [Synth 8-6157] synthesizing module 'fifo_8_sys' [D:/three_verilog/fpga_IP_define/Axi_DMA/prj/Axi_DMA/Axi_DMA.runs/synth_1/.Xil/Vivado-27076-LAPTOP-H1858A6E/realtime/fifo_8_sys_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'fifo_8_sys' (0#1) [D:/three_verilog/fpga_IP_define/Axi_DMA/prj/Axi_DMA/Axi_DMA.runs/synth_1/.Xil/Vivado-27076-LAPTOP-H1858A6E/realtime/fifo_8_sys_stub.v:5]
+WARNING: [Synth 8-6104] Input port 'bit_depth' has an internal driver [D:/three_verilog/fpga_IP_define/Axi_DMA/rtl/axi_dma.v:467]
+WARNING: [Synth 8-6104] Input port 'bit_depth' has an internal driver [D:/three_verilog/fpga_IP_define/Axi_DMA/rtl/axi_dma.v:467]
+WARNING: [Synth 8-6104] Input port 'bit_depth' has an internal driver [D:/three_verilog/fpga_IP_define/Axi_DMA/rtl/axi_dma.v:467]
+INFO: [Synth 8-6155] done synthesizing module 'axi_dma' (0#1) [D:/three_verilog/fpga_IP_define/Axi_DMA/rtl/axi_dma.v:1]
+WARNING: [Synth 8-6014] Unused sequential element post_hcnt_reg was removed.  [D:/three_verilog/fpga_IP_define/Axi_DMA/rtl/axi_dma.v:514]
+WARNING: [Synth 8-6014] Unused sequential element post_vcnt_reg was removed.  [D:/three_verilog/fpga_IP_define/Axi_DMA/rtl/axi_dma.v:524]
+WARNING: [Synth 8-3917] design axi_dma has port M_AXI_AWID driven by constant 0
+WARNING: [Synth 8-3917] design axi_dma has port M_AXI_AWLEN[7] driven by constant 0
+WARNING: [Synth 8-3917] design axi_dma has port M_AXI_AWLEN[6] driven by constant 1
+WARNING: [Synth 8-3917] design axi_dma has port M_AXI_AWLEN[5] driven by constant 0
+WARNING: [Synth 8-3917] design axi_dma has port M_AXI_AWLEN[4] driven by constant 0
+WARNING: [Synth 8-3917] design axi_dma has port M_AXI_AWLEN[3] driven by constant 1
+WARNING: [Synth 8-3917] design axi_dma has port M_AXI_AWLEN[2] driven by constant 1
+WARNING: [Synth 8-3917] design axi_dma has port M_AXI_AWLEN[1] driven by constant 1
+WARNING: [Synth 8-3917] design axi_dma has port M_AXI_AWLEN[0] driven by constant 1
+WARNING: [Synth 8-3917] design axi_dma has port M_AXI_AWSIZE[2] driven by constant 0
+WARNING: [Synth 8-3917] design axi_dma has port M_AXI_AWSIZE[1] driven by constant 1
+WARNING: [Synth 8-3917] design axi_dma has port M_AXI_AWSIZE[0] driven by constant 1
+WARNING: [Synth 8-3917] design axi_dma has port M_AXI_AWBURST[1] driven by constant 0
+WARNING: [Synth 8-3917] design axi_dma has port M_AXI_AWBURST[0] driven by constant 1
+WARNING: [Synth 8-3917] design axi_dma has port M_AXI_AWLOCK driven by constant 0
+WARNING: [Synth 8-3917] design axi_dma has port M_AXI_AWCACHE[3] driven by constant 0
+WARNING: [Synth 8-3917] design axi_dma has port M_AXI_AWCACHE[2] driven by constant 0
+WARNING: [Synth 8-3917] design axi_dma has port M_AXI_AWCACHE[1] driven by constant 1
+WARNING: [Synth 8-3917] design axi_dma has port M_AXI_AWCACHE[0] driven by constant 0
+WARNING: [Synth 8-3917] design axi_dma has port M_AXI_AWPROT[2] driven by constant 0
+WARNING: [Synth 8-3917] design axi_dma has port M_AXI_AWPROT[1] driven by constant 0
+WARNING: [Synth 8-3917] design axi_dma has port M_AXI_AWPROT[0] driven by constant 0
+WARNING: [Synth 8-3917] design axi_dma has port M_AXI_AWQOS[3] driven by constant 0
+WARNING: [Synth 8-3917] design axi_dma has port M_AXI_AWQOS[2] driven by constant 0
+WARNING: [Synth 8-3917] design axi_dma has port M_AXI_AWQOS[1] driven by constant 0
+WARNING: [Synth 8-3917] design axi_dma has port M_AXI_AWQOS[0] driven by constant 0
+WARNING: [Synth 8-3917] design axi_dma has port M_AXI_WSTRB[7] driven by constant 1
+WARNING: [Synth 8-3917] design axi_dma has port M_AXI_WSTRB[6] driven by constant 1
+WARNING: [Synth 8-3917] design axi_dma has port M_AXI_WSTRB[5] driven by constant 1
+WARNING: [Synth 8-3917] design axi_dma has port M_AXI_WSTRB[4] driven by constant 1
+WARNING: [Synth 8-3917] design axi_dma has port M_AXI_WSTRB[3] driven by constant 1
+WARNING: [Synth 8-3917] design axi_dma has port M_AXI_WSTRB[2] driven by constant 1
+WARNING: [Synth 8-3917] design axi_dma has port M_AXI_WSTRB[1] driven by constant 1
+WARNING: [Synth 8-3917] design axi_dma has port M_AXI_WSTRB[0] driven by constant 1
+WARNING: [Synth 8-3917] design axi_dma has port M_AXI_BREADY driven by constant 1
+WARNING: [Synth 8-3917] design axi_dma has port M_AXI_ARID driven by constant 0
+WARNING: [Synth 8-3917] design axi_dma has port M_AXI_ARLEN[7] driven by constant 0
+WARNING: [Synth 8-3917] design axi_dma has port M_AXI_ARLEN[6] driven by constant 1
+WARNING: [Synth 8-3917] design axi_dma has port M_AXI_ARLEN[5] driven by constant 0
+WARNING: [Synth 8-3917] design axi_dma has port M_AXI_ARLEN[4] driven by constant 0
+WARNING: [Synth 8-3917] design axi_dma has port M_AXI_ARLEN[3] driven by constant 1
+WARNING: [Synth 8-3917] design axi_dma has port M_AXI_ARLEN[2] driven by constant 1
+WARNING: [Synth 8-3917] design axi_dma has port M_AXI_ARLEN[1] driven by constant 1
+WARNING: [Synth 8-3917] design axi_dma has port M_AXI_ARLEN[0] driven by constant 1
+WARNING: [Synth 8-3917] design axi_dma has port M_AXI_ARSIZE[2] driven by constant 0
+WARNING: [Synth 8-3917] design axi_dma has port M_AXI_ARSIZE[1] driven by constant 1
+WARNING: [Synth 8-3917] design axi_dma has port M_AXI_ARSIZE[0] driven by constant 1
+WARNING: [Synth 8-3917] design axi_dma has port M_AXI_ARBURST[1] driven by constant 0
+WARNING: [Synth 8-3917] design axi_dma has port M_AXI_ARBURST[0] driven by constant 1
+WARNING: [Synth 8-3917] design axi_dma has port M_AXI_ARLOCK driven by constant 0
+WARNING: [Synth 8-3917] design axi_dma has port M_AXI_ARCACHE[3] driven by constant 0
+WARNING: [Synth 8-3917] design axi_dma has port M_AXI_ARCACHE[2] driven by constant 0
+WARNING: [Synth 8-3917] design axi_dma has port M_AXI_ARCACHE[1] driven by constant 1
+WARNING: [Synth 8-3917] design axi_dma has port M_AXI_ARCACHE[0] driven by constant 0
+WARNING: [Synth 8-3917] design axi_dma has port M_AXI_ARPROT[2] driven by constant 0
+WARNING: [Synth 8-3917] design axi_dma has port M_AXI_ARPROT[1] driven by constant 0
+WARNING: [Synth 8-3917] design axi_dma has port M_AXI_ARPROT[0] driven by constant 0
+WARNING: [Synth 8-3917] design axi_dma has port M_AXI_ARQOS[3] driven by constant 0
+WARNING: [Synth 8-3917] design axi_dma has port M_AXI_ARQOS[2] driven by constant 0
+WARNING: [Synth 8-3917] design axi_dma has port M_AXI_ARQOS[1] driven by constant 0
+WARNING: [Synth 8-3917] design axi_dma has port M_AXI_ARQOS[0] driven by constant 0
+WARNING: [Synth 8-7129] Port i_wr_index[7] in module axi_dma is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_wr_index[6] in module axi_dma is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_wr_index[5] in module axi_dma is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_wr_index[4] in module axi_dma is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_wr_index[3] in module axi_dma is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_wr_index[2] in module axi_dma is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_wr_index[1] in module axi_dma is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_wr_index[0] in module axi_dma is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_AXI_BID in module axi_dma is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_AXI_BRESP[1] in module axi_dma is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_AXI_BRESP[0] in module axi_dma is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_AXI_BVALID in module axi_dma is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_AXI_RID in module axi_dma is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_AXI_RRESP[1] in module axi_dma is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_AXI_RRESP[0] in module axi_dma is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 2328.828 ; gain = 505.223
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 2346.754 ; gain = 523.148
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 2346.754 ; gain = 523.148
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 2346.754 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [d:/three_verilog/fpga_IP_define/Axi_DMA/prj/Axi_DMA/Axi_DMA.gen/sources_1/ip/fifo_8_sys/fifo_8_sys/fifo_8_sys_in_context.xdc] for cell 'u1_fifo_fs_start'
+Finished Parsing XDC File [d:/three_verilog/fpga_IP_define/Axi_DMA/prj/Axi_DMA/Axi_DMA.gen/sources_1/ip/fifo_8_sys/fifo_8_sys/fifo_8_sys_in_context.xdc] for cell 'u1_fifo_fs_start'
+Parsing XDC File [d:/three_verilog/fpga_IP_define/Axi_DMA/prj/Axi_DMA/Axi_DMA.gen/sources_1/ip/fifo_wr_64_64/fifo_wr_64_64/fifo_wr_64_64_in_context.xdc] for cell 'WR_EN.u1_fifo_wr_64_64'
+Finished Parsing XDC File [d:/three_verilog/fpga_IP_define/Axi_DMA/prj/Axi_DMA/Axi_DMA.gen/sources_1/ip/fifo_wr_64_64/fifo_wr_64_64/fifo_wr_64_64_in_context.xdc] for cell 'WR_EN.u1_fifo_wr_64_64'
+Parsing XDC File [d:/three_verilog/fpga_IP_define/Axi_DMA/prj/Axi_DMA/Axi_DMA.gen/sources_1/ip/fifo_rd_64_8/fifo_rd_64_8/fifo_rd_64_8_in_context.xdc] for cell 'RD_EN.u1_fifo_rd_64_8'
+Finished Parsing XDC File [d:/three_verilog/fpga_IP_define/Axi_DMA/prj/Axi_DMA/Axi_DMA.gen/sources_1/ip/fifo_rd_64_8/fifo_rd_64_8/fifo_rd_64_8_in_context.xdc] for cell 'RD_EN.u1_fifo_rd_64_8'
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2459.465 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 2459.465 ; gain = 0.000
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:03 ; elapsed = 00:00:10 . Memory (MB): peak = 2459.465 ; gain = 635.859
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a75tfgg484-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:03 ; elapsed = 00:00:10 . Memory (MB): peak = 2459.465 ; gain = 635.859
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for u1_fifo_fs_start. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for \WR_EN.u1_fifo_wr_64_64 . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for \RD_EN.u1_fifo_rd_64_8 . (constraint file  auto generated constraint).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:03 ; elapsed = 00:00:10 . Memory (MB): peak = 2459.465 ; gain = 635.859
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:11 . Memory (MB): peak = 2459.465 ; gain = 635.859
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   16 Bit       Adders := 1     
+	   2 Input    8 Bit       Adders := 5     
++---Registers : 
+	               64 Bit    Registers := 1     
+	               16 Bit    Registers := 1     
+	                8 Bit    Registers := 7     
+	                1 Bit    Registers := 16    
++---Muxes : 
+	   2 Input   16 Bit        Muxes := 1     
+	   3 Input    8 Bit        Muxes := 1     
+	   2 Input    2 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 13    
+	   3 Input    1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 180 (col length:80)
+BRAMs: 210 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+DSP Report: Generating DSP rd_base_addr_reg, operation Mode is: ((A:0x50000)*B2)'.
+DSP Report: register rd_index_r_reg is absorbed into DSP rd_base_addr_reg.
+DSP Report: register rd_base_addr_reg is absorbed into DSP rd_base_addr_reg.
+DSP Report: operator rd_base_addr0 is absorbed into DSP rd_base_addr_reg.
+WARNING: [Synth 8-3917] design axi_dma has port M_AXI_AWID driven by constant 0
+WARNING: [Synth 8-3917] design axi_dma has port M_AXI_AWLEN[7] driven by constant 0
+WARNING: [Synth 8-3917] design axi_dma has port M_AXI_AWLEN[6] driven by constant 1
+WARNING: [Synth 8-3917] design axi_dma has port M_AXI_AWLEN[5] driven by constant 0
+WARNING: [Synth 8-3917] design axi_dma has port M_AXI_AWLEN[4] driven by constant 0
+WARNING: [Synth 8-3917] design axi_dma has port M_AXI_AWLEN[3] driven by constant 1
+WARNING: [Synth 8-3917] design axi_dma has port M_AXI_AWLEN[2] driven by constant 1
+WARNING: [Synth 8-3917] design axi_dma has port M_AXI_AWLEN[1] driven by constant 1
+WARNING: [Synth 8-3917] design axi_dma has port M_AXI_AWLEN[0] driven by constant 1
+WARNING: [Synth 8-3917] design axi_dma has port M_AXI_AWSIZE[2] driven by constant 0
+WARNING: [Synth 8-3917] design axi_dma has port M_AXI_AWSIZE[1] driven by constant 1
+WARNING: [Synth 8-3917] design axi_dma has port M_AXI_AWSIZE[0] driven by constant 1
+WARNING: [Synth 8-3917] design axi_dma has port M_AXI_AWBURST[1] driven by constant 0
+WARNING: [Synth 8-3917] design axi_dma has port M_AXI_AWBURST[0] driven by constant 1
+WARNING: [Synth 8-3917] design axi_dma has port M_AXI_AWLOCK driven by constant 0
+WARNING: [Synth 8-3917] design axi_dma has port M_AXI_AWCACHE[3] driven by constant 0
+WARNING: [Synth 8-3917] design axi_dma has port M_AXI_AWCACHE[2] driven by constant 0
+WARNING: [Synth 8-3917] design axi_dma has port M_AXI_AWCACHE[1] driven by constant 1
+WARNING: [Synth 8-3917] design axi_dma has port M_AXI_AWCACHE[0] driven by constant 0
+WARNING: [Synth 8-3917] design axi_dma has port M_AXI_AWPROT[2] driven by constant 0
+WARNING: [Synth 8-3917] design axi_dma has port M_AXI_AWPROT[1] driven by constant 0
+WARNING: [Synth 8-3917] design axi_dma has port M_AXI_AWPROT[0] driven by constant 0
+WARNING: [Synth 8-3917] design axi_dma has port M_AXI_AWQOS[3] driven by constant 0
+WARNING: [Synth 8-3917] design axi_dma has port M_AXI_AWQOS[2] driven by constant 0
+WARNING: [Synth 8-3917] design axi_dma has port M_AXI_AWQOS[1] driven by constant 0
+WARNING: [Synth 8-3917] design axi_dma has port M_AXI_AWQOS[0] driven by constant 0
+WARNING: [Synth 8-3917] design axi_dma has port M_AXI_WSTRB[7] driven by constant 1
+WARNING: [Synth 8-3917] design axi_dma has port M_AXI_WSTRB[6] driven by constant 1
+WARNING: [Synth 8-3917] design axi_dma has port M_AXI_WSTRB[5] driven by constant 1
+WARNING: [Synth 8-3917] design axi_dma has port M_AXI_WSTRB[4] driven by constant 1
+WARNING: [Synth 8-3917] design axi_dma has port M_AXI_WSTRB[3] driven by constant 1
+WARNING: [Synth 8-3917] design axi_dma has port M_AXI_WSTRB[2] driven by constant 1
+WARNING: [Synth 8-3917] design axi_dma has port M_AXI_WSTRB[1] driven by constant 1
+WARNING: [Synth 8-3917] design axi_dma has port M_AXI_WSTRB[0] driven by constant 1
+WARNING: [Synth 8-3917] design axi_dma has port M_AXI_BREADY driven by constant 1
+WARNING: [Synth 8-3917] design axi_dma has port M_AXI_ARID driven by constant 0
+WARNING: [Synth 8-3917] design axi_dma has port M_AXI_ARLEN[7] driven by constant 0
+WARNING: [Synth 8-3917] design axi_dma has port M_AXI_ARLEN[6] driven by constant 1
+WARNING: [Synth 8-3917] design axi_dma has port M_AXI_ARLEN[5] driven by constant 0
+INFO: [Common 17-14] Message 'Synth 8-3917' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+WARNING: [Synth 8-7129] Port i_wr_index[7] in module axi_dma is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_wr_index[6] in module axi_dma is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_wr_index[5] in module axi_dma is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_wr_index[4] in module axi_dma is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_wr_index[3] in module axi_dma is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_wr_index[2] in module axi_dma is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_wr_index[1] in module axi_dma is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_wr_index[0] in module axi_dma is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_AXI_BID in module axi_dma is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_AXI_BRESP[1] in module axi_dma is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_AXI_BRESP[0] in module axi_dma is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_AXI_BVALID in module axi_dma is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_AXI_RID in module axi_dma is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_AXI_RRESP[1] in module axi_dma is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_AXI_RRESP[0] in module axi_dma is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:04 ; elapsed = 00:00:12 . Memory (MB): peak = 2459.465 ; gain = 635.859
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+DSP: Preliminary Mapping Report (see note below. The ' indicates corresponding REG is set)
++------------+-------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping       | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+-------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|axi_dma     | ((A:0x50000)*B2)' | 19     | 8      | -      | -      | 27     | 0    | 1    | -    | -    | -     | 1    | 0    | 
++------------+-------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:06 ; elapsed = 00:00:18 . Memory (MB): peak = 2459.465 ; gain = 635.859
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:06 ; elapsed = 00:00:18 . Memory (MB): peak = 2459.465 ; gain = 635.859
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:06 ; elapsed = 00:00:19 . Memory (MB): peak = 2459.465 ; gain = 635.859
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:07 ; elapsed = 00:00:22 . Memory (MB): peak = 2459.465 ; gain = 635.859
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:07 ; elapsed = 00:00:22 . Memory (MB): peak = 2459.465 ; gain = 635.859
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:07 ; elapsed = 00:00:22 . Memory (MB): peak = 2459.465 ; gain = 635.859
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:07 ; elapsed = 00:00:22 . Memory (MB): peak = 2459.465 ; gain = 635.859
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:22 . Memory (MB): peak = 2459.465 ; gain = 635.859
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:07 ; elapsed = 00:00:22 . Memory (MB): peak = 2459.465 ; gain = 635.859
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+DSP Final Report (the ' indicates corresponding REG is set)
++------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|axi_dma     | (A*B')'     | 19     | 8      | -      | -      | 27     | 0    | 1    | -    | -    | -     | 0    | 1    | 
++------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+
+Report BlackBoxes: 
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |fifo_wr_64_64 |         1|
+|2     |fifo_rd_64_8  |         1|
+|3     |fifo_8_sys    |         1|
++------+--------------+----------+
+
+Report Cell Usage: 
++------+-----------+------+
+|      |Cell       |Count |
++------+-----------+------+
+|1     |fifo_8_sys |     1|
+|2     |fifo_rd_64 |     1|
+|3     |fifo_wr_64 |     1|
+|4     |BUFG       |     3|
+|5     |CARRY4     |    30|
+|6     |DSP48E1    |     1|
+|7     |LUT1       |    14|
+|8     |LUT2       |    40|
+|9     |LUT3       |    28|
+|10    |LUT4       |    35|
+|11    |LUT5       |    41|
+|12    |LUT6       |    22|
+|13    |FDRE       |   248|
+|14    |FDSE       |     1|
+|15    |IBUF       |    85|
+|16    |OBUF       |   212|
++------+-----------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:07 ; elapsed = 00:00:22 . Memory (MB): peak = 2459.465 ; gain = 635.859
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 77 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:06 ; elapsed = 00:00:20 . Memory (MB): peak = 2459.465 ; gain = 523.148
+Synthesis Optimization Complete : Time (s): cpu = 00:00:07 ; elapsed = 00:00:22 . Memory (MB): peak = 2459.465 ; gain = 635.859
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 2459.465 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 31 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2459.465 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete, checksum: d6e485c3
+INFO: [Common 17-83] Releasing license: Synthesis
+35 Infos, 141 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:08 ; elapsed = 00:00:25 . Memory (MB): peak = 2459.465 ; gain = 1030.406
+INFO: [Common 17-1381] The checkpoint 'D:/three_verilog/fpga_IP_define/Axi_DMA/prj/Axi_DMA/Axi_DMA.runs/synth_1/axi_dma.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file axi_dma_utilization_synth.rpt -pb axi_dma_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sat Dec  2 15:36:50 2023...

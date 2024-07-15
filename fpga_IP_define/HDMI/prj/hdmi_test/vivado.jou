@@ -1,0 +1,54 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Wed Jan 17 14:29:06 2024
+# Process ID: 43272
+# Current directory: D:/three_verilog/fpga_IP_define/HDMI/prj/hdmi_test
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent50992 D:\three_verilog\fpga_IP_define\HDMI\prj\hdmi_test\hdmi_test.xpr
+# Log file: D:/three_verilog/fpga_IP_define/HDMI/prj/hdmi_test/vivado.log
+# Journal file: D:/three_verilog/fpga_IP_define/HDMI/prj/hdmi_test\vivado.jou
+# Running On: LAPTOP-H1858A6E, OS: Windows, CPU Frequency: 2688 MHz, CPU Physical cores: 14, Host memory: 16828 MB
+#-----------------------------------------------------------
+start_gui
+open_project D:/three_verilog/fpga_IP_define/HDMI/prj/hdmi_test/hdmi_test.xpr
+update_compile_order -fileset sources_1
+update_module_reference design_1_HDMI_TX_0_1
+ipx::infer_core -vendor xilinx.com -library user -taxonomy /UserIP D:/three_verilog/fpga_IP_define/HDMI/IP
+ipx::infer_core -vendor xilinx.com -library user -taxonomy /UserIP D:/three_verilog/fpga_IP_define/HDMI/RTL
+ipx::edit_ip_in_project -upgrade true -name HDMI_TX -directory D:/three_verilog/fpga_IP_define/HDMI/prj/hdmi_test/hdmi_test.tmp d:/three_verilog/fpga_IP_define/HDMI/RTL/component.xml
+ipx::current_core d:/three_verilog/fpga_IP_define/HDMI/RTL/component.xml
+update_compile_order -fileset sources_1
+close_project
+close_project
+open_project D:/three_verilog/fpga_IP_define/HDMI/prj/hdmi_test/hdmi_test.xpr
+update_compile_order -fileset sources_1
+ipx::infer_core -vendor xilinx.com -library user -taxonomy /UserIP D:/three_verilog/fpga_IP_define/HDMI/RTL
+ipx::edit_ip_in_project -upgrade true -name HDMI_TX -directory D:/three_verilog/fpga_IP_define/HDMI/IP d:/three_verilog/fpga_IP_define/HDMI/RTL/component.xml
+ipx::current_core d:/three_verilog/fpga_IP_define/HDMI/RTL/component.xml
+update_compile_order -fileset sources_1
+set_property is_enabled false [get_files  {d:/three_verilog/fpga_IP_define/HDMI/RTL/image_process/Post_Raw2Rgb.v d:/three_verilog/fpga_IP_define/HDMI/RTL/image_process/Pre_Bayer2RGB.v d:/three_verilog/fpga_IP_define/HDMI/RTL/image_process/Curve_Gamma_2P2.v d:/three_verilog/fpga_IP_define/HDMI/RTL/image_process/Gamma_06.v}]
+ipx::open_ipxact_file {d:\three_verilog\fpga_IP_define\HDMI\RTL\component.xml}
+ipx::open_ipxact_file {d:\three_verilog\fpga_IP_define\HDMI\RTL\component.xml}
+ipx::open_ipxact_file {d:\three_verilog\fpga_IP_define\HDMI\RTL\component.xml}
+ipx::open_ipxact_file {d:\three_verilog\fpga_IP_define\HDMI\RTL\component.xml}
+ipx::open_ipxact_file {d:\three_verilog\fpga_IP_define\HDMI\RTL\component.xml}
+ipx::open_ipxact_file {d:\three_verilog\fpga_IP_define\HDMI\RTL\component.xml}
+ipx::open_ipxact_file {d:\three_verilog\fpga_IP_define\HDMI\RTL\component.xml}
+ipx::open_ipxact_file {d:\three_verilog\fpga_IP_define\HDMI\RTL\component.xml}
+close_project
+ipx::package_project -root_dir d:/three_verilog/fpga_ip_define/hdmi -vendor xilinx.com -library user -taxonomy /UserIP
+ipx::open_ipxact_file {d:\three_verilog\fpga_ip_define\hdmi\component.xml}
+ipx::open_ipxact_file {d:\three_verilog\fpga_ip_define\hdmi\component.xml}
+ipx::open_ipxact_file {d:\three_verilog\fpga_ip_define\hdmi\component.xml}
+ipx::infer_core -as_library true D:/three_verilog/fpga_IP_define/HDMI/RTL
+ipx::edit_ip_in_project -upgrade true -name HDMI_TX_IP -directory D:/three_verilog/fpga_IP_define/HDMI/IP d:/three_verilog/fpga_IP_define/HDMI/RTL/component.xml
+ipx::current_core d:/three_verilog/fpga_IP_define/HDMI/RTL/component.xml
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+ipx::open_ipxact_file {d:\three_verilog\fpga_IP_define\HDMI\RTL\component.xml}
+ipx::open_ipxact_file {d:\three_verilog\fpga_IP_define\HDMI\RTL\component.xml}
+ipx::open_ipxact_file {d:\three_verilog\fpga_IP_define\HDMI\RTL\component.xml}
+ipx::open_ipxact_file {d:\three_verilog\fpga_IP_define\HDMI\RTL\component.xml}
+ipx::open_ipxact_file {d:\three_verilog\fpga_IP_define\HDMI\RTL\component.xml}
+close_project
